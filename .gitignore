@@ -1,178 +1,28 @@
-# Python
+﻿# Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
+*.pyo
+*.pyd
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
 
 # Virtual Environment
 venv/
 env/
-ENV/
 
 # IDEs
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
 
 # OS
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# Project specific
+# Project
 nasa_images/
-downloaded_images/
 *.jpg
 *.png
 *.mp4
-*.mp3
-config.json
-secrets.py
-
-# Logs
-*.log
-```
-
-### 3. Mentsd: `Ctrl+S`
-
----
-
-## 🐍 requirements.txt
-
-### 1. Új fájl: `requirements.txt`
-
-### 2. Tartalom:
-```
-requests>=2.31.0
-```
-
-### 3. Mentsd: `Ctrl+S`
-
----
-
-## 📊 Source Control - Git Műveletek
-
-Most commitoljuk az első fájlokat!
-
-### 1. Source Control Panel Megnyitása
-
-- Bal oldali sidebar: **Source Control** ikon (elágazó vonalak, 3. ikon felülről)
-- VAGY: `Ctrl+Shift+G`
-
-### 2. Változások Megjelennek
-
-Látni fogod:
-```
-Changes (3)
-├── README.md
-├── .gitignore
-└── requirements.txt
-```
-
-### 3. Stage All Changes
-
-- Kattints a **"+"** ikonra a "Changes" felirat mellett
-- VAGY: Minden fájl melletti **"+"** gombra egyesével
-
-### 4. Commit Message
-
-A felső szövegdobozba írj:
-```
-Initial commit: Add README, gitignore, requirements
-```
-
-### 5. Commit
-
-- Kattints: **✓ Commit** gomb
-- VAGY: `Ctrl+Enter`
-
-### 6. Push GitHub-ra
-
-- Kattints: **Sync Changes** gomb (vagy **Push** ha az jelenik meg)
-- VAGY: **"..."** menü → **Push**
-
-### 7. Authentication (Ha kéri)
-
-Ha először push-olsz VS Code-ból:
-- Pop-up: **"Allow"**
-- Böngésző megnyílik → GitHub login
-- Authorize VS Code
-- Visszalépve automatikusan push-ol
-
----
-
-## ✅ Ellenőrzés GitHub-on
-
-1. Menj böngészőben:
-```
-   https://github.com/nhGeri/NASA-MCP
-```
-
-2. Frissítsd (F5)
-
-3. Látszanak a fájlok? ✅
-   - README.md
-   - .gitignore
-   - requirements.txt
-
----
-
-## 🎯 KÖVETKEZŐ LÉPÉS: További Fájlok
-
-Most már tudod a flow-t! Hozzáadhatsz további fájlokat:
-
-### Példa: nasa_api_example.py
-
-1. **Új fájl**: `src/nasa_api_example.py`
-
-2. **Tartalom**: Másold be a korábban letöltött Python kódot
-
-3. **Mentés**: `Ctrl+S`
-
-4. **Source Control**: Stage → Commit: "Add: NASA API example script" → Push
-
----
-
-## 🔥 Gyors Parancsok Összefoglalás
-```
-Ctrl+`          → Terminal
-Ctrl+Shift+G    → Source Control
-Ctrl+S          → Mentés
-Ctrl+Shift+P    → Command Palette
-Ctrl+P          → Fájl keresése
-Ctrl+K Ctrl+R   → Reveal in Explorer
-```
-
----
-
-## 🎨 CHAT Panel (Jobb oldalt)
-
-Látom, hogy van egy **CHAT** panel a jobb oldalon. Ez lehet:
-- **GitHub Copilot**
-- **Continue** (ha telepítetted)
-- Vagy más AI assistant
-
-**Használhatod ezt is!** Kérdezhetsz tőle kódot, vagy segítséget.
-
-Példa:
-```
-Készíts egy Python függvényt, ami lekérdezi a NASA API-t
-és visszaadja az első 5 találat címét.
