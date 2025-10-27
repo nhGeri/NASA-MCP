@@ -18,7 +18,7 @@ A NASA nyilvános képtárának programozási felületen való elérése és has
 
 **Végpontok**:
 - `/search` - Keresés
-- `/asset/{nasa_id}` - Asset manifest
+- `/asset/{nasa_id}` - Asset manifest, Bármilyen fájl amit a projekt használ
 - `/metadata/{nasa_id}` - Metadata
 
 ## 🚀 Használat
