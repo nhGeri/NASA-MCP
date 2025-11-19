@@ -22,7 +22,7 @@ def test_nasa_api():
         print(f"📊 Találatok: {total:,}\n")
         
         print("🖼️  Első 3 találat:")
-        for idx, item in enumerate(data['collection']['items'], 1):
+        for idx, item in enumerate(data['collection']['items'], 1):   #számozas 1-
             title = item['data'][0]['title']
             nasa_id = item['data'][0]['nasa_id']
             print(f"{idx}. {title}")
