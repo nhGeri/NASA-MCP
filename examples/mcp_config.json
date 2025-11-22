@@ -1,0 +1,25 @@
+{
+  "models": [
+    {
+      "title": "LM Studio (NASA Brain)",
+      "provider": "openai", 
+      "model": "lmstudio-model",
+      "apiBase": "http://localhost:1234/v1",
+      "apiKey": "lm-studio",
+      "systemMessage": "You are a helpful assistant with access to NASA tools. Use them whenever the user asks about space, images, or Apollo missions."
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Autocomplete",
+    "provider": "lmstudio",
+    "model": "lmstudio-model",
+    "apiBase": "http://localhost:1234/v1"
+  },
+  "mcpServers": [
+    {
+      "name": "NASA-Library",
+      "command": "python", 
+      "args": ["C:/Users/nagyh/source/repos/NASA-MCP/mcp_server.py"]
+    }
+  ]
+}

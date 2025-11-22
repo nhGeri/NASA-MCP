@@ -49,3 +49,29 @@ NASA-MCP/
 Készítette: Nagy-Horváth Gergő  
 Dátum: 2025  
 Cél: NASA API technikai megismerése
+
+
+
+## 🎯 Mikor Melyiket Használd?
+
+### 🔍 Használd a SEARCH-öt ha:
+- ✅ Böngészni akarsz
+- ✅ Nem tudod a NASA ID-t
+- ✅ Témára keresel ("Mars")
+- ✅ Szűrni akarsz (év, típus)
+
+### 📦 Használd az ASSET-et ha:
+- ✅ Le akarsz tölteni egy képet/videót
+- ✅ Tudod a NASA ID-t
+- ✅ Különböző méreteket akarsz
+
+### 📋 Használd a METADATA-t ha:
+- ✅ Technikai adatokat akarsz
+- ✅ Kamera beállítások kellenek
+- ✅ GPS koordináták kellenek
+- ✅ Pontos időpont kell
+
+### 📝 Használd a CAPTIONS-t ha:
+- ✅ Videód van
+- ✅ Felirat kell hozzá
+- ✅ Szöveges transzript kell
