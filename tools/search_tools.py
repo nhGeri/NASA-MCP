@@ -15,7 +15,7 @@ def register_search_tools(mcp):
         year_start: str = "",
         year_end: str = "",
         page_size: int = 10
-    ) -> dict:
+    ) -> str:
         """
         Search NASA's COMPLETE image and video library by ANY keywords.
         
@@ -63,31 +63,28 @@ def register_search_tools(mcp):
         items = data['collection']['items']
         total_hits = data['collection']['metadata']['total_hits']
         
-        results = []
+        markdown_results = [f"Searched NASA's complete database. Found {total_hits:,} total items for query '{query}'.\n"]
         for item in items:
             item_data = item['data'][0]
-            results.append({
-                'title': item_data.get('title', 'Untitled'),
-                'nasa_id': item_data.get('nasa_id'),
-                'description': item_data.get('description', ''),
-                'date_created': item_data.get('date_created', ''),
-                'media_type': item_data.get('media_type', 'image'),
-                'thumbnail_url': item['links'][0]['href'] if 'links' in item else None
-            })
-        
-        return {
-            'query': query,
-            'total_hits': total_hits,
-            'returned_results': len(results),
-            'results': results,
-            'note': f'Searched NASA\'s complete database. Found {total_hits:,} total items.'
-        }
+            title = item_data.get('title', 'Untitled')
+            description = item_data.get('description', '')
+            image_url = item['links'][0]['href'] if 'links' in item else ''
+            
+            if image_url:
+                markdown_results.append(f"### {title}\n\n![NASA Image]({image_url})\n\n{description}\n---")
+            else:
+                markdown_results.append(f"### {title}\n\n{description}\n---")
+                
+        if len(markdown_results) == 1:
+            return "No results found."
+            
+        return "\n\n".join(markdown_results)
     
     @mcp.tool()
     def search_apollo11_specific(
         query: str = "",
         page_size: int = 10
-    ) -> dict:
+    ) -> str:
         """
         Quick search focused on Apollo 11 mission images.
         

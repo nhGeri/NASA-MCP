@@ -1,0 +1,11 @@
+Program indítása:
+- Docker
+- Powershell
+- cd C:\Users\nagyh\source\repos\SciChat
+- docker compose up -d
+- http://localhost:3080
+
+
+Build: docker compose up -d --build mcp-nasa
+
+Log:   docker compose logs -f mcp-nasa
